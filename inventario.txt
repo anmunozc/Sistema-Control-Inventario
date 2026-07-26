@@ -1,0 +1,3 @@
+P001 - Notebook Lenovo - 899990.0 - COMPUTADOR
+P002 - Samsung Galaxy S24 - 799990.0 - TELEFONO
+P003 - Mouse Logitech - 24990.0 - ACCESORIO

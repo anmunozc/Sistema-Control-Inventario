@@ -1,18 +1,57 @@
-## Getting Started
+# Sistema de Control de Inventario
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto desarrollado en Java para gestionar productos dentro de un sistema de inventario.
 
-## Folder Structure
+El sistema permite registrar productos, organizarlos mediante categorías y almacenar su información en un archivo de texto para mantener los datos disponibles después de finalizar la ejecución del programa.
 
-The workspace contains two folders by default, where:
+## Tecnologías utilizadas
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+* Java
+* Visual Studio Code
+* Git
+* GitHub
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Estructura del proyecto
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+```text
+Sistema-Control-Inventario
+│
+├── src
+│   ├── app
+│   │   └── Main.java
+│   │
+│   ├── modelo
+│   │   ├── Producto.java
+│   │   ├── Categoria.java
+│   │   └── Inventario.java
+│   │
+│   └── persistencia
+│       └── ArchivoInventario.java
+│
+├── inventario.txt
+└── README.md
+```
 
-## Dependency Management
+## Funcionalidades implementadas
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+* Organización modular mediante paquetes.
+* Registro de productos.
+* Clasificación de productos mediante categorías.
+* Administración de productos mediante una lista.
+* Persistencia de información mediante archivos de texto.
+* Recuperación de los productos almacenados.
+* Aplicación de buenas prácticas de programación.
+
+## Ejecución
+
+La aplicación se ejecuta desde la clase:
+
+```text
+src/app/Main.java
+```
+
+Durante la ejecución, el sistema crea productos, los incorpora al inventario, almacena su información en el archivo `inventario.txt` y posteriormente recupera los datos para mostrarlos por consola.
+
+## Autor
+
+anmunozc

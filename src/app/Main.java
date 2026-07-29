@@ -50,9 +50,9 @@ public class Main {
                 new ArchivoInventario("inventario.txt");
 
         // Guardar los productos en el archivo
-        archivo.guardarProducto(producto1.toString());
-        archivo.guardarProducto(producto2.toString());
-        archivo.guardarProducto(producto3.toString());
+       for (Producto producto : inventario.obtenerProductos()) {
+        archivo.guardarProducto(producto.toString());
+}
 
         System.out.println("=== PRODUCTOS GUARDADOS EN EL ARCHIVO ===");
 

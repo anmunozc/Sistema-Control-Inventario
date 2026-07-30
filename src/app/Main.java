@@ -1,18 +1,33 @@
 /*
  *================================================
- * Clase Principal del programa
+ * Clase principal del programa
  *================================================
  */
 
 package app;
 
-import modelo.Producto;
 import modelo.Categoria;
 import modelo.Inventario;
+import modelo.Producto;
 import persistencia.ArchivoInventario;
 
+/**
+ * Clase principal del sistema de control de inventario.
+ *
+ * Esta clase crea los productos, los incorpora al
+ * inventario, guarda su información en un archivo
+ * de texto y posteriormente recupera los datos.
+ *
+ * @author anmunozc
+ */
 public class Main {
 
+    /**
+     * Punto de inicio de la aplicación.
+     *
+     * @param args Argumentos recibidos desde la
+     * línea de comandos.
+     */
     public static void main(String[] args) {
 
         // Crear un inventario
@@ -47,14 +62,21 @@ public class Main {
 
         // Crear el archivo de persistencia
         ArchivoInventario archivo =
-                new ArchivoInventario("inventario.txt");
+                new ArchivoInventario(
+                        "inventario.txt");
 
         // Guardar los productos en el archivo
-       for (Producto producto : inventario.obtenerProductos()) {
-        archivo.guardarProducto(producto.toString());
-}
+        for (Producto producto :
+                inventario.obtenerProductos()) {
 
-        System.out.println("=== PRODUCTOS GUARDADOS EN EL ARCHIVO ===");
+            archivo.guardarProducto(
+                    producto.toString());
+
+        }
+
+        System.out.println(
+                "=== PRODUCTOS GUARDADOS "
+                + "EN EL ARCHIVO ===");
 
         // Leer los productos almacenados
         archivo.leerProductos();

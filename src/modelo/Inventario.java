@@ -6,31 +6,54 @@
 
 package modelo;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-//Lista que almacena los productos del inventario
+/**
+ * Administra la colección de productos registrados
+ * dentro del sistema de control de inventario.
+ *
+ * La clase permite agregar productos y obtener
+ * la lista de productos almacenados.
+ *
+ * @author anmunozc
+ */
 public class Inventario {
 
-
+    /**
+     * Lista utilizada para almacenar los productos
+     * registrados en el inventario.
+     */
     private List<Producto> productos;
 
-// Inicializar la lista vacia de productos
+    /**
+     * Construye un inventario vacío e inicializa
+     * la lista de productos.
+     */
     public Inventario() {
 
         productos = new ArrayList<>();
 
     }
 
-// Agregar un producto al inventario
+    /**
+     * Agrega un producto a la lista del inventario.
+     *
+     * @param producto Producto que será incorporado
+     * al inventario.
+     */
     public void agregarProducto(Producto producto) {
 
         productos.add(producto);
 
     }
 
-// Obtener la lista de productos del inventario
+    /**
+     * Retorna la lista de productos registrados
+     * en el inventario.
+     *
+     * @return Lista de productos almacenados.
+     */
     public List<Producto> obtenerProductos() {
 
         return productos;
